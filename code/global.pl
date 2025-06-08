@@ -9,10 +9,10 @@ get_global(test, a/b, Value),
 delete_global(test).
 
 reset_counter(test, 3).
-(count_down(test) -> format('2') ; format('OVER')).
-(count_down(test) -> format('1') ; format('OVER')).
-(count_down(test) -> format('0') ; format('OVER')).
-(count_down(test) -> format('-1') ; format('OVER')).
+(count_down(test) -> format("2") ; format("OVER")).
+(count_down(test) -> format("1") ; format("OVER")).
+(count_down(test) -> format("0") ; format("OVER")).
+(count_down(test) -> format('-1') ; format("OVER")).
 */
 set_global(Name, Path, Value) :-
     (nb_current(Name, Dict) ->

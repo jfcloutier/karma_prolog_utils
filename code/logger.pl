@@ -9,61 +9,61 @@ A flexible logging utility.
 [code(logger)].
 
 reset_logging,
-log(debug, test, 'This is a debug test'),
-log(debug, test, 'This is a debug test ~p', [1]),
-log(warn, test, 'This is a warn test'),
-log(warn, test, 'This is a warn test ~p', [1]),
+log(debug, test, "This is a debug test"),
+log(debug, test, "This is a debug test ~p", [1]),
+log(warn, test, "This is a warn test"),
+log(warn, test, "This is a warn test ~p", [1]),
 logger:level(Level),
 logger:ignored(AllIgnored).
 
 reset_logging,
-log_to('test.log'),
+log_to("test.log"),
 set_log_level(info),
-log(debug, test, 'This is a debug test'),
-log(debug, test, 'This is a debug test ~p', [1]),
-log(info, test, 'This is an info test'),
-log(info, test, 'This is an info test ~p', [1]),
-log(warn, test, 'This is a warn test'),
-log(warn, test, 'This is a warn test ~p', [1]),
+log(debug, test, "This is a debug test"),
+log(debug, test, "This is a debug test ~p", [1]),
+log(info, test, "This is an info test"),
+log(info, test, "This is an info test ~p", [1]),
+log(warn, test, "This is a warn test"),
+log(warn, test, "This is a warn test ~p", [1]),
 logger:level(Level),
 logger:ignored(AllIgnored).
 
 reset_logging,
 set_log_level(error),
-log(debug, test, 'This is a debug test'),
-log(debug, test, 'This is a debug test ~p', [1]),
-log(warn, test, 'This is a warn test'),
-log(warn, test, 'This is a warn test ~p', [1]),
+log(debug, test, "This is a debug test"),
+log(debug, test, "This is a debug test ~p", [1]),
+log(warn, test, "This is a warn test"),
+log(warn, test, "This is a warn test ~p", [1]),
 logger:level(Level),
 logger:ignored(AllIgnored).
 
 reset_logging,
 set_log_level(info),
 ignore_log_topic(test1).
-log(debug, test, 'This is a debug test'),
-log(debug, test1, 'This is a debug test1 ~p', [bla]),
-log(info, test, 'This is an info test'),
-log(info, test1, 'This is an info test1 ~p', [bla]),
-log(warn, test, 'This is a warn test'),
-log(warn, test1, 'This is a warn test1 ~p', [bla]),
+log(debug, test, "This is a debug test"),
+log(debug, test1, "This is a debug test1 ~p", [bla]),
+log(info, test, "This is an info test"),
+log(info, test1, "This is an info test1 ~p", [bla]),
+log(warn, test, "This is a warn test"),
+log(warn, test1, "This is a warn test1 ~p", [bla]),
 logger:level(Level),
 logger:ignored(AllIgnored).
 
 set_log_level(info),
 ignore_log_topic(test1).
 reset_logging,
-log(debug, test, 'This is a debug test'),
-log(debug, test1, 'This is a debug test1 ~p', [bla]),
-log(info, test, 'This is an info test'),
-log(info, test1, 'This is an info test1 ~p', [bla]),
-log(warn, test, 'This is a warn test'),
-log(warn, test1, 'This is a warn test1 ~p', [bla]),
+log(debug, test, "This is a debug test"),
+log(debug, test1, "This is a debug test1 ~p", [bla]),
+log(info, test, "This is an info test"),
+log(info, test1, "This is an info test1 ~p", [bla]),
+log(warn, test, "This is a warn test"),
+log(warn, test1, "This is a warn test1 ~p", [bla]),
 logger:level(Level),
 logger:ignored(AllIgnored).
 
 
 open('test.log', write, _, [alias(log_file), create([default])]),
-format(log_file, 'This is a ~p~n', ['test']),
+format(log_file, 'This is a ~p~n', ["test"]),
 close(log_file, [force(true)]).
 */
 
